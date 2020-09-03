@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Action Classification with Posenet Demo</title>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script> -->
+
+	<style>
+    .wrapper {
+      text-align: center;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 5px 15px;
+      font-size: 12px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #4c8baf;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 4px #999;
+    }
+
+    .button:hover {
+      background-color: #3e8e41
+    }
+
+    .button:active {
+      background-color: #3e8e41;
+      box-shadow: 0 3px #666;
+      transform: translateY(2px);
+    }
+
+    .center {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+	<p>
+  		<div class="wrapper">
+  			<button onclick="startLoop()" style="text-align:center">Start</button>		
+  		</div>
+	</p>
+	<p style="text-align:center">Webcam Posenet with TFJS:</p>
+	<video autoplay="true" id="videoInput" class="center" width="400px" height="300px" style="display: none;"></video>
+		<div id="remoteVideos">
+			<canvas id="videoCanvas" class="center"></canvas>
+		</div>
+
+	<script type="module" src="./js/posejs.js"></script>
+</body>
+</html>
